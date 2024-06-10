@@ -44,6 +44,8 @@ body {
     cursor: pointer;
 }
 
+/* start header image */
+
 .header__content__image {
     width: 100vw;
     position: absolute;
@@ -59,18 +61,47 @@ body {
     z-index: -1;
 }
 
+.header__image__content--text {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__image--text--title {
+    font-size: 20px;
+}
+
+.header__image--line {
+    width: 50%;
+    height: 1px;
+    background: #fff;
+    margin: .3rem 0;
+}
+
+.header__image--text--description {
+    font-size: 15px;
+}
+
+/* end header image */
+
 /* start header nav */
 
 .header__menu--nav {
     position: absolute;
     width: 100vw;
     top: var(--height__header--movil);
-    left: 0;
-    transition: left .5s linear;
+    left: -100vw;
+    transition: left .3s linear;
 }
 
 .header__menu--nav--toggle {
-    left: -100vw;
+    left: 0;
 }
 
 .header__menu--ul {
