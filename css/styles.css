@@ -9,8 +9,8 @@
 
 :root {
     --height__header--movil: 50px;
-    }
-    
+}
+
 body {
     overflow-x: hidden;
 }
@@ -61,6 +61,36 @@ body {
 
 /* start header nav */
 
+.header__menu--nav {
+    position: absolute;
+    width: 100vw;
+    top: var(--height__header--movil);
+    left: 0;
+    transition: left .5s linear;
+}
 
+.header__menu--nav--toggle {
+    left: -100vw;
+}
+
+.header__menu--ul {
+    list-style: none;
+}
+
+.header__menu--a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding-left: 1rem;
+    transition: background-color .3s linear;
+    text-transform: capitalize;
+}
+
+.header__menu--a:hover {
+    background-color: cyan;
+    background-color: rgba(0, 0, 0, .8);
+}
 
 /* end header nav */
