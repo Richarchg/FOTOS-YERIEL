@@ -1,7 +1,6 @@
 *,
 *::after,
 *::before {
-  font-family: "Montserrat";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,6 +9,11 @@
 :root {
   --height__header--movil: 50px;
   --color-gray: rgb(103, 103, 103);
+  --color-gray-cards: rgb(130, 148, 168);
+  --border-color: rgb(239, 239, 239);
+  --font__family--montserrat: "Montserrat";
+  --font__family--gloock: "Gloock", serif;
+  --font__family--lora: "Lora", serif;
 }
 
 body {
@@ -26,11 +30,23 @@ body {
   padding-right: 1rem;
   position: fixed;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__content__information--white {
+  background-color: #fff;
 }
 
 .header__logo {
   color: #fff;
   text-decoration: none;
+  font-family: var(--font__family--montserrat);
+
+}
+
+.header__logo--gray {
+  color: gray;
 }
 
 .header__content__menuBurger {
@@ -76,7 +92,7 @@ body {
 }
 
 .header__image--text--title {
-  font-size: 20px;
+  font-size: 22.5px;
 }
 
 .header__image--line {
@@ -87,7 +103,7 @@ body {
 }
 
 .header__image--text--description {
-  font-size: 15px;
+  font-size: 22.5px;
 }
 
 /* end header image */
@@ -119,6 +135,7 @@ body {
   padding-left: 1rem;
   transition: background-color 0.3s linear;
   text-transform: capitalize;
+  font-family: var(--font__family--montserrat);
 }
 
 .header__menu--a:hover {
@@ -160,15 +177,18 @@ body {
 .main__information--title__anio {
   font-weight: normal;
   margin: 1rem 0;
+  font-family: var(--font__family--gloock);
 }
 
 .main__information--text__anio {
   font-size: 16px;
   line-height: 25px;
+  font-family: var(--font__family--montserrat);
 }
 
 .main__information--button__anio,
-.main__information--button__aboutMe {
+.main__information--button__aboutMe,
+.main__card__plan--reserve {
   text-transform: uppercase;
   padding: 1rem;
   background: transparent;
@@ -183,7 +203,9 @@ body {
   border-radius: 2px;
 }
 
-.main__information--button__anio:hover {
+.main__information--button__anio:hover,
+.main__information--button__aboutMe:hover,
+.main__card__plan--reserve:hover {
   background-color: #000;
   color: #fff;
   border-color: #000;
@@ -204,37 +226,115 @@ body {
 
 .main__information--text__aboutMe {
   font-size: 18px;
+  font-family: var(--font__family--lora);
 }
 
 .main__information--title__aboutMe {
   margin: 1rem 0 2rem 0;
   font-size: 22px;
   font-weight: normal;
+  font-family: var(--font__family--gloock);
 }
 
 .main__information--button__aboutMe {
-    color: #fff;
-    border-color: #fff;
+  color: #fff;
+  border-color: #fff;
 }
 
 .main__information--button__aboutMe:hover {
-    background-color: #fff;
-    color: #000;
-    border-color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
 }
 
 .main__information__content__socialNetworks {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-around;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .main__information__content__socialNetworks img {
-    width: 20px;
+  width: 20px;
 }
 
 /* end section about me */
+
+/* start section cards plans */
+
+.section__cards__plans {
+  margin-top: 2rem;
+}
+
+.main__container__cards__plans {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main__card__plan--title {
+  text-align: center;
+  font-family: var(--font__family--gloock);
+  font-size: 22.5px;
+  color: rgb(68, 68, 68);
+  font-weight: 400;
+}
+
+.main__content__card_plan {
+  border: 1px solid var(--border-color);
+}
+
+.main__card__plan--type {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  font-family: var(--font__family--lora);
+  color: var(--color-gray-cards);
+}
+
+.main__card__plan--price {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  font-family: var(--font__family--gloock);
+  font-size: 54px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.main__card__plan--content__image {
+  width: 100%;
+  height: 40%;
+}
+
+.main__card__plan--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__card__plan--benefits {
+  font-family: var(--font__family--montserrat);
+  color: var(--color-gray-cards);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0 1rem 1rem;
+  transition: background-color 0.2s linear;
+}
+
+.main__card__plan--benefits:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.main__card__plan--reserve {
+  text-decoration: none;
+  text-align: center;
+  width: 50%;
+  font-family: var(--font__family--montserrat);
+  transition: background-color 0.2s linear;
+}
+
+/* end section cards plans */
 
 /* end main */
