@@ -372,7 +372,7 @@ body {
 
 .main__how__work--container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
 }
 
@@ -390,3 +390,64 @@ body {
 /* end section how does it work */
 
 /* end main */
+
+/* start footer */
+
+.footer {
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+
+.footer--content__social__networks {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.footer__social__networks--icon {
+  font-size: 20px;
+  color: lime;
+  color: rgb(119, 119, 119);
+  transition: color .1s linear;
+  position: relative;
+}
+
+.footer__social__networks--icon:hover {
+  color: #fff;
+}
+
+.footer__social__networks--icon::before {
+  content: "informando icon";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(119, 119, 119);
+  transition: color .1s linear;
+}
+
+.footer__social__networks--icon:hover::before {
+  border-color: #fff;
+}
+
+.footer span {
+  display: flex;
+  color: rgb(119, 119, 119);
+  font-family: var(--font__family--montserrat);
+  font-size: 12px;
+}
+
+.footer p {
+  margin-right: 10px;
+}
+
+
+/* end footer */

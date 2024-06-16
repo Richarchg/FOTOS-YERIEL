@@ -32,3 +32,6 @@ addEventListener("scroll", (e) => {
 
   }
 });
+
+let footerYear = document.querySelector(".footer__year");
+footerYear.textContent = new Date().getFullYear();
