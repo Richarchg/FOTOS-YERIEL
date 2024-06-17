@@ -223,6 +223,24 @@ body {
   border-color: #000;
 }
 
+@media screen and (min-width: 1024px) {
+  .main__container__section__anio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .main__content--buttons__anio {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
 /* end section years */
 
 /* start section about me */
@@ -276,6 +294,14 @@ body {
 
 .main__information__content__socialNetworks img {
   width: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .main__container__section__aboutMe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
 }
 
 /* end section about me */
@@ -420,6 +446,12 @@ body {
 .main__how__work--number {
   padding: 1rem 0;
   font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .main__how__work--container {
+    grid-template-columns: repeat(4,1fr);
+  }
 }
 
 /* end section how does it work */
