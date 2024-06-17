@@ -167,6 +167,8 @@ body {
 
 .main__container__section__anio {
   padding-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .main__content__photo__anio {
@@ -190,6 +192,7 @@ body {
   font-weight: normal;
   margin: 1rem 0;
   font-family: var(--font__family--gloock);
+  color: rgb(68, 68, 68);
 }
 
 .main__information--text__anio {
@@ -239,6 +242,10 @@ body {
     margin-right: auto;
   }
 
+  .main__information--title__anio {
+    font-size: 30px;
+  }
+
 }
 
 /* end section years */
@@ -251,7 +258,10 @@ body {
 
 .main__content__information__aboutMe {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
+  /* background-color: lime; */
+  width: 80%;
+  margin: 0 auto;
 }
 
 .main__information--text__aboutMe,
@@ -301,6 +311,10 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+  }
+
+  .main__information--title__aboutMe {
+    font-size: 40px;
   }
 }
 
@@ -373,9 +387,10 @@ body {
   font-family: var(--font__family--montserrat);
   color: var(--color-gray-cards);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem 0;
   transition: background-color 0.2s linear;
   cursor: pointer;
+  text-align: center;
 }
 
 .main__card__plan--benefits:hover {
@@ -396,9 +411,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* .main__content__card_plan {
-    width: 100%;
-  } */
+  .main__card__plan--title {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -450,7 +465,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .main__how__work--container {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__how__work--number {
+    font-size: 80px;
   }
 }
 
