@@ -52,3 +52,9 @@ addEventListener("DOMContentLoaded", () => {
     })
   })
 });
+
+const arrowUp = document.querySelector(".arrow-up");
+
+arrowUp.addEventListener("click", () => {
+  console.log(scroll(0,0));
+});
