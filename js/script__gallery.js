@@ -11,29 +11,6 @@ headerContentMenuBurger.addEventListener("click", () => {
   headerMenuNav.classList.toggle("header__menu--nav--toggle");
 });
 
-addEventListener("scroll", (e) => {
-  if (window.scrollY > 100) {
-    headerContentInformation.classList.add("header__content__information--white");
-
-    headerLogo.classList.add("header__logo--gray");
-    headerLogo.classList.remove("header__logo");
-
-    headerMenuBurgerChilds.forEach(line => {
-      line.style.background = "#000";
-    });
-
-  } else {
-    headerContentInformation.classList.remove("header__content__information--white");
-    headerLogo.classList.add("header__logo");
-    headerLogo.classList.remove("header__logo--gray");
-
-    headerMenuBurgerChilds.forEach(line => {
-      line.style.background = "#000";
-    });
-
-  }
-});
-
 let footerYear = document.querySelector(".footer__year");
 footerYear.textContent = new Date().getFullYear();
 
@@ -55,5 +32,5 @@ addEventListener("DOMContentLoaded", () => {
 const arrowUp = document.querySelector(".arrow-up");
 
 arrowUp.addEventListener("click", () => {
-  console.log(scroll(0,0));
+  console.log(scroll(0, 0));
 });

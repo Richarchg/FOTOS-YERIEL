@@ -43,10 +43,6 @@ body {
   }
 }
 
-.header {
-  height: var(--height__header--movil);
-}
-
 .header__content__information {
   height: var(--height__header--movil);
   width: 100vw;
@@ -58,9 +54,11 @@ body {
   position: fixed;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .header__content__information--white {
+  background-color: #fff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,20 +93,6 @@ body {
   border-radius: 10px;
 }
 
-/* 
-.header__image--line {
-  width: 50%;
-  height: 1px;
-  background: #fff;
-  margin: 0.3rem 0;
-} */
-
-.header__image--text--description {
-  font-size: 22.5px;
-}
-
-/* end header image */
-
 /* start header nav */
 
 .header__menu--nav {
@@ -139,16 +123,16 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding-left: 1rem;
   transition: background-color 0.3s linear;
   text-transform: capitalize;
   font-family: var(--font__family--montserrat);
-  color: #fff;
-  background-color: #000;
 }
 
 .header__menu--a:hover {
-  background-color: rgba(17, 17, 17, 0.897);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (min-width: 600px) {
@@ -159,16 +143,20 @@ body {
 
 @media screen and (min-width: 1024px) {
 
+  .header__content__information {
+    background-color: #fff;
+  }
+
+  .header__logo {
+    color: #000;
+  }
+
   .header__menu--nav {
     left: 15%;
     width: 80%;
     top: 0;
     right: 0;
     height: var(--height__header--movil);
-  }
-
-  .header__logo {
-    color: #000;
   }
 
   .header__menu--ul {
@@ -186,12 +174,12 @@ body {
     display: flex;
     justify-content: center;
     padding-left: 0;
-    background-color: transparent;
     color: #000;
+    background-color: transparent;
   }
 
   .header__menu--a:hover {
-    background-color: rgba(41, 41, 41, 0.897);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
   }
 
@@ -207,60 +195,11 @@ body {
 
 .main {
   background-color: #f8f8f8;
+  height: 400vh;
 }
 
-.main__section__container__title {
-  margin: auto;
-  text-align: center;
-  color: rgb(68, 68, 68);
-  width: 100vw;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.main__section__title--text {
-  font-family: var(--font__family--lora);
-  font-size: 19px;
-}
-
-.main__section__title--title {
-  font-family: var(--font__family--gloock);
-  font-size: 40px;
-  position: relative;
-}
-
-.main__section__title--title::after,
-.main__section__title--title::before {
-  content: "";
-  width: 20%;
-  height: 1px;
-  background-color: rgb(233, 227, 227);
-  position: absolute;
-  right: 5%;
-  top: 50%;
-}
-
-.main__section__title--title::before {
-  left: 5%;
-}
-
-.main__section__title--info {
-  font-family: var(--font__family--montserrat);
-}
-
-@media screen and (min-width: 1024px) {
-
-  .main__section__container__title {
-    width: 50vw;
-  }
-
-  .main__section__title--title::after,
-  .main__section__title--title::before {
-    width: 30%;
-  }
-}
+/* end section how does it work */
 
 /* end main */
 
@@ -286,6 +225,7 @@ body {
 
 .footer__social__networks--icon {
   font-size: 20px;
+  color: lime;
   color: rgb(119, 119, 119);
   transition: color .1s linear;
 }
