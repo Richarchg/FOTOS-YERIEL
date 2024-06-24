@@ -5,3 +5,9 @@ const headerMenuNav = document.querySelector(".header__menu--nav");
 headerContentMenuBurger.addEventListener("click", () => {
   headerMenuNav.classList.toggle("header__menu--nav--toggle");
 });
+
+const arrowUp = document.querySelector(".arrow-up");
+
+arrowUp.addEventListener("click", () => {
+  console.log(scroll(0,0));
+});
