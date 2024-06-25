@@ -143,10 +143,10 @@ body {
 .header__menu--nav {
   position: absolute;
   width: 100vw;
-  height: 80vh;
   top: var(--height__header--movil);
   left: -100vw;
   transition: left 0.3s linear;
+  height: 80vh;
 }
 
 .header__menu--nav--toggle {
