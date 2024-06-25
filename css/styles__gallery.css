@@ -169,7 +169,58 @@ body {
 
 .main {
   padding: 5rem 0;
+  background-color: #f8f8f8;
 }
+
+/* start main information */
+.main__section__container__information {
+  width: 90vw;
+  text-align: center;
+  color: rgb(68, 68, 68);
+  margin: 5rem auto;
+  position: relative;
+}
+
+.main__section__information--description {
+  font-family: var(--font__family--lora);
+  font-size: 19px;
+}
+
+.main__section__information--title {
+  font-family: var(--font__family--gloock);
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+.main__section__information--title::after,
+.main__section__information--title::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50%;
+  right: 0;
+}
+
+.main__section__information--title::after {
+  left: 0;
+}
+
+.main__section__information--information {
+  font-family: var(--font__family--montserrat);
+  color: rgb(103, 103, 103);
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+  .main__section__container__information {
+    width: 50vw;
+  }
+}
+
+/* end main information */
 
 .main__section__container__photos {
   width: 80%;
@@ -206,6 +257,10 @@ body {
   .main__section__container__photos {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .main__section__container--content--photos {
+    height: 300px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -215,3 +270,64 @@ body {
 }
 
 /* end main */
+
+
+/* start footer */
+
+.footer {
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+}
+
+.footer--content__social__networks {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.footer__social__networks--icon {
+  font-size: 20px;
+  color: lime;
+  color: rgb(119, 119, 119);
+  transition: color .1s linear;
+}
+
+.footer__social__networks--icon:hover {
+  color: #fff;
+}
+
+.footer__social__networks--icon::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(119, 119, 119);
+  transition: color .1s linear;
+}
+
+.footer__social__networks--icon:hover::before {
+  border-color: #fff;
+}
+
+.footer span {
+  display: flex;
+  color: rgb(119, 119, 119);
+  font-family: var(--font__family--montserrat);
+  font-size: 12px;
+}
+
+.footer p {
+  margin-right: 10px;
+}
+
+/* end footer */

@@ -9,5 +9,8 @@ headerContentMenuBurger.addEventListener("click", () => {
 const arrowUp = document.querySelector(".arrow-up");
 
 arrowUp.addEventListener("click", () => {
-  console.log(scroll(0,0));
+  console.log(scroll(0, 0));
 });
+
+let footerYear = document.querySelector(".footer__year");
+footerYear.textContent = new Date().getFullYear();
